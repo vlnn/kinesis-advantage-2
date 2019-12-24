@@ -1,0 +1,9 @@
+startup_file=qwerty.txt
+key_click_tone=ON
+toggle_tone=ON
+macro_disable=OFF
+macro_speed=3
+status_play_speed=3
+power_user=true
+program_key_lock=OFF
+

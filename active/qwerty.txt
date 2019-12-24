@@ -1,0 +1,34 @@
+* backward compatibility
+[escape]>[caps]
+[lshift]>[lctrl]
+[delete]>[lshift]
+
+* mapping i3 workplaces
+{f1}>{-rwin}{1}{+rwin}
+{f2}>{-rwin}{2}{+rwin}
+{f3}>{-rwin}{3}{+rwin}
+{f4}>{-rwin}{4}{+rwin}
+{f5}>{-rwin}{5}{+rwin}
+
+* {} are more usual than []
+{obrack}>{speed4}{-lshift}{obrack}{+lshift}
+{lshift}{obrack}>{speed4}{obrack}
+{rshift}{obrack}>{speed4}{obrack}
+{cbrack}>{speed4}{-lshift}{cbrack}{+lshift}
+{lshift}{cbrack}>{speed4}{cbrack}
+{rshift}{cbrack}>{speed4}{cbrack}
+
+* make copy-pasting a quick artistic instinct
+{end}>{-lctrl}{c}{+lctrl}
+{home}>{-lctrl}{v}{+lctrl}
+
+* caps is vim-like esc or shift
+[caps]>[escape][t&h250][lshift]
+
+* vim-like (not really) movements
+[lctrl]>[kpshift]
+[kp-lctrl]>[kpshift]
+[kp4]>[left]
+[kp5]>[down]
+[kpplus]>[right]
+[kp6]>[up]
