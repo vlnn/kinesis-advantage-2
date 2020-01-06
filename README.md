@@ -1,5 +1,5 @@
-# kinetic-advantage2
-## Sane layouts for the THE KEYBOARD
+# kinesis-advantage-2
+## Sane layouts for the THE KINESIS KEYBOARD
 
 Kinesis Advantage2 is the state-of-the-art ergonomic keyboard with sofisticated configuration setup.
 
