@@ -1,7 +1,9 @@
-* backward compatibility
+* backward^W vim compatibility
 [escape]>[caps]
 [lshift]>[lctrl]
 [delete]>[lshift]
+[up]>[down]
+[down]>[up]
 
 * mapping i3 workplaces
 {f1}>{-rwin}{1}{+rwin}
@@ -9,6 +11,9 @@
 {f3}>{-rwin}{3}{+rwin}
 {f4}>{-rwin}{4}{+rwin}
 {f5}>{-rwin}{5}{+rwin}
+{f6}>{-rwin}{6}{+rwin}
+{f7}>{-rwin}{7}{+rwin}
+{f8}>{-rwin}{8}{+rwin}
 
 * {} are more usual than []
 {obrack}>{speed4}{-lshift}{obrack}{+lshift}
@@ -24,6 +29,9 @@
 
 * caps is vim-like esc or shift
 [caps]>[escape][t&h250][lshift]
+
+* enter is either enter or shift depending on holding
+[enter]>[enter][t&h250][rshift]
 
 * vim-like (not really) movements
 [lctrl]>[kpshift]
