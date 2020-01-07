@@ -26,6 +26,7 @@
 * make copy-pasting a quick artistic instinct
 {end}>{-lctrl}{c}{+lctrl}
 {home}>{-lctrl}{v}{+lctrl}
+{rshift}{home}>{-lctrl}{x}{+lctrl}
 
 * caps is vim-like esc or shift
 [caps]>[escape][t&h250][lshift]
@@ -33,10 +34,22 @@
 * enter is either enter or shift depending on holding
 [enter]>[enter][t&h250][rshift]
 
-* vim-like (not really) movements
+* set the keypad layer mapped to lctrl
 [lctrl]>[kpshift]
 [kp-lctrl]>[kpshift]
+
+* vim-like (not really) movements on jkl;
 [kp4]>[left]
 [kp5]>[down]
 [kpplus]>[right]
 [kp6]>[up]
+
+* additional usual actions in keypad layer in uiop
+[kp7]>[tab]
+[kp8]>[home]
+[kp9]>[end]
+
+* coding-specific caps-bindedinserts
+{caps}{enter}>{+lshift}{end}{enter}{+lshift}
+{caps}{lctrl}{enter}>{+lshift}{up}{end}{enter}{+lshift}
+{caps}{obrack}>{+lshift}{end}{-lshift}{obrack}{+lshift}{enter}
