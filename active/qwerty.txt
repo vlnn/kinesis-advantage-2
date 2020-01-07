@@ -5,7 +5,7 @@
 [up]>[down]
 [down]>[up]
 
-* mapping i3 workplaces
+* mapping i3 workplaces changes 
 {f1}>{-rwin}{1}{+rwin}
 {f2}>{-rwin}{2}{+rwin}
 {f3}>{-rwin}{3}{+rwin}
@@ -14,6 +14,16 @@
 {f6}>{-rwin}{6}{+rwin}
 {f7}>{-rwin}{7}{+rwin}
 {f8}>{-rwin}{8}{+rwin}
+
+* moving app to i3 workplaces 
+{rshift}{f1}>{-rwin}{-rshift}{1}{+rshift}{+rwin}
+{rshift}{f2}>{-rwin}{-rshift}{2}{+rshift}{+rwin}
+{rshift}{f3}>{-rwin}{-rshift}{3}{+rshift}{+rwin}
+{rshift}{f4}>{-rwin}{-rshift}{4}{+rshift}{+rwin}
+{rshift}{f5}>{-rwin}{-rshift}{5}{+rshift}{+rwin}
+{rshift}{f6}>{-rwin}{-rshift}{6}{+rshift}{+rwin}
+{rshift}{f7}>{-rwin}{-rshift}{7}{+rshift}{+rwin}
+{rshift}{f8}>{-rwin}{-rshift}{8}{+rshift}{+rwin}
 
 * {} are more usual than []
 {obrack}>{speed4}{-lshift}{obrack}{+lshift}
