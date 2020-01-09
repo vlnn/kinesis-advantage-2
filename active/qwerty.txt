@@ -38,11 +38,29 @@
 {home}>{-lctrl}{v}{+lctrl}
 {lshift}{end}>{-lctrl}{x}{+lctrl}
 
-* set the keypad layer mapped to lctrl
+* windows buttons mapped to hold g and h...
+[g]>[g][t&h250][lwin]
+[h]>[h][t&h250][rwin]
+
+* so free 'command' key can be used for something else:
+[rwin]>[rctrl]
+[lalt]>[lctrl]
+
+* doubling rctrl and lctrl on hold f and j
+[f]>[f][t&h250][lctrl]
+[j]>[j][t&h250][rctrl]
+
+* and ralt and lalt to hold k and d
+[d]>[d][t&h250][lalt]
+[k]>[k][t&h250][ralt]
+
+* set the keypad layer mapped to rctrl and lctrl
 [lctrl]>[kpshift]
 [kp-lctrl]>[kpshift]
+[rctrl]>[kpshift]
+[kp-rctrl]>[kpshift]
 
-* vim-like (not really) movements on jkl;
+* vim-like (not really) movements on kpshift+jkl;
 [kp4]>[left]
 [kp5]>[down]
 [kpplus]>[right]
