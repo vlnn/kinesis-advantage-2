@@ -8,8 +8,9 @@ This setup here is
 * qwerty-based
 * simple
 * customized instead of being universal
+* symmetrical where possible
 * autodocumented
-* intended to transform the potential powers of the keyboard into the kinetic ones
+* intended to transform the potential powers of the kinesis advantage 2 keyboard into the kinetic ones
 
 To install it you have to
 
