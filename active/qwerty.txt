@@ -1,9 +1,7 @@
-* backward^W vim compatibility
+* backward^W neural compatibility
 [escape]>[caps]
 [lshift]>[lctrl]
 [delete]>[lshift]
-[up]>[down]
-[down]>[up]
 
 * mapping i3 workplaces changes 
 {f1}>{-rwin}{1}{+rwin}
@@ -38,22 +36,6 @@
 {home}>{-lctrl}{v}{+lctrl}
 {lshift}{end}>{-lctrl}{x}{+lctrl}
 
-* windows buttons mapped to hold g and h...
-[g]>[g][t&h250][lwin]
-[h]>[h][t&h250][rwin]
-
-* so free 'command' key can be used for something else:
-[rwin]>[rctrl]
-[lalt]>[lctrl]
-
-* doubling rctrl and lctrl on hold f and j
-[f]>[f][t&h250][lctrl]
-[j]>[j][t&h250][rctrl]
-
-* and ralt and lalt to hold k and d
-[d]>[d][t&h250][lalt]
-[k]>[k][t&h250][ralt]
-
 * set the keypad layer mapped to rctrl and lctrl
 [lctrl]>[kpshift]
 [kp-lctrl]>[kpshift]
@@ -71,8 +53,18 @@
 [kp8]>[home]
 [kp9]>[end]
 
+* upper row on thumb has ctrls
+[rwin]>[rctrl]
+[lalt]>[lctrl]
+
+*  up/right are wins and down/left are alts
+[up]>[rwin]
+[right]>[rwin]
+[left]>[lalt]
+[down]>[ralt]
+
 * caps is vim-like esc or shift
-[caps]>[escape][t&h250][lshift]
+[caps]>[escape][t&h200][lshift]
 
 * enter is either enter or shift depending on holding
-[enter]>[enter][t&h250][rshift]
+[enter]>[enter][t&h200][rshift]
