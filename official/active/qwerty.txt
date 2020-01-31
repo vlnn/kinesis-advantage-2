@@ -19,8 +19,8 @@
 {rshift}{cbrack}>{speed4}{cbrack}
 
 * make copy-pasting a quick artistic instinct
-{end}>{-lctrl}{c}{+lctrl}
-{home}>{-lctrl}{v}{+lctrl}
+{end}>{-kp-rcontrol}{kp-insert}{+kp-rcontrol}
+{home}>{-kp-rshift}{kp-insert}{+kp-rshift}
 
 * caps is vim-like esc or shift
 [caps]>[escape][t&h250][lshift]
