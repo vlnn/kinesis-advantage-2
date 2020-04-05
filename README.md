@@ -12,6 +12,8 @@ This setup here is
 * autodocumented
 * intended to transform the potential powers of the kinesis advantage 2 keyboard into the kinetic ones
 
+![Somewhat outdated layout](https://github.com/vlnn/kinesis-advantage-2/blob/master/kinesis-advantage-tamed.png)
+
 ## Official (no mod) keymap installation
 
 * update the keyboard firmware to 1.0.516 as described here: https://kinesis-ergo.com/support/advantage2/
