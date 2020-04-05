@@ -16,7 +16,7 @@ This setup here is
 
 ## Stapelberg mod keymap installation (QMK based)
 
-This is general more functional variant, which **requires** (Stapelberg mod)[https://michael.stapelberg.ch/posts/2013-03-21-kinesis_custom_controller/]. This means hardware change of the controller of your Kinesis Advantage keyboard. In return you have all the features from QMK available (in my firmware mod keys set up on home row keys -- i.e. holding `F` or `J` is same as holding the `SHIFT` key -- which makes "usual" mod keys under pinky unnecessary). I don't think there is a feature in official firmware, which you can not set up using QMK -- except the warranty!
+This is general more functional variant, which **_requires_** [Stapelberg mod](https://michael.stapelberg.ch/posts/2013-03-21-kinesis_custom_controller/). This means hardware change of the controller of your Kinesis Advantage keyboard. In return you have all the features from QMK available (in my firmware mod keys set up on home row keys -- i.e. holding `F` or `J` is same as holding the `SHIFT` key -- which makes "usual" mod keys under pinky unnecessary). I don't think there is a feature in official firmware, which you can not set up using QMK -- except the warranty!
 
 * clone [qmk_firmware](https://github.com/qmk/qmk_firmware) repo
 * create new directory inside `qmk_firmware/keyboards/kinesis/keymaps/{your_directory}`
