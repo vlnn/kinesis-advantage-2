@@ -17,21 +17,21 @@ This setup here is
 ## Official (no mod) keymap installation
 #### Note that it's outdated and misses couple features that "Stapelberg" version has
 #### This also means that official setup is no longer maintained
-* update the keyboard firmware to 1.0.516 as described here: https://kinesis-ergo.com/support/advantage2/
-* get to power-user mode pressing progm+shift+esc
-* mount and open the folder with configs pressing progm+F1
+* update the keyboard firmware to **1.0.516** as described here: https://kinesis-ergo.com/support/advantage2/
+* get to power-user mode pressing *progm+shift+esc*
+* mount and open the folder with configs pressing *progm+F1*
 * copy the configs from `official` over the existing ones
-* press progm+F1 once again to unmount the config folder and apply the new configuration
+* press *progm+F1* once again to unmount the `config` folder of the internal drive and apply the new configuration
 
 ## Stapelberg mod keymap installation
 
 This is general more functional variant.
 
 * install qmk_firmware
-* create new directory inside qmk_firmware/keyboards/kinesis/keymaps/{your_directory}
-* copy files from qmk directory there
-* make kinesis/stapelberg:{your_directory}
-* the firmware called kinesis_stapelberg_{your_directory} can be installed to your keyboard using teensy or qmk_toolset
+* create new directory inside `qmk_firmware/keyboards/kinesis/keymaps/{your_directory}`
+* copy files from `qmk` directory there
+* `make kinesis/stapelberg:{your_directory}`
+* the firmware called `kinesis_stapelberg_{your_directory}` can be installed to your keyboard using [**teensy**](https://www.pjrc.com/teensy/loader_linux.html) or [**qmk_toolbox**](https://qmk.fm/toolbox/)
 
 ## General notes
 You're more than welcome to make configs better sending me pull requests or creating issues. I'm more than free to ignore those requests.
