@@ -9,7 +9,7 @@ typedef struct {
 
 enum { HOLD = 1, SINGLE_TAP = 2, DOUBLE_TAP = 3, TRIPLE_TAP = 4, QUAD_TAP = 5 };
 
-int cur_dance(qk_tap_dance_state_t *state) {
+int cur_dance(tap_dance_state_t *state) {
   if (state->pressed)
     return HOLD;
 
@@ -31,7 +31,7 @@ int cur_dance(qk_tap_dance_state_t *state) {
 static int spl_o_tap_state = 0;
 static int spl_c_tap_state = 0;
 
-void space_cadet_open_finished(qk_tap_dance_state_t *state, void *user_data) {
+void space_cadet_open_finished(tap_dance_state_t *state, void *user_data) {
   spl_o_tap_state = cur_dance(state);
   switch (spl_o_tap_state) {
   case SINGLE_TAP:
@@ -54,7 +54,7 @@ void space_cadet_open_finished(qk_tap_dance_state_t *state, void *user_data) {
   }
 }
 
-void space_cadet_open_reset(qk_tap_dance_state_t *state, void *user_data) {
+void space_cadet_open_reset(tap_dance_state_t *state, void *user_data) {
   switch (spl_o_tap_state) {
   case SINGLE_TAP:
     unregister_code(KC_9);
@@ -78,7 +78,7 @@ void space_cadet_open_reset(qk_tap_dance_state_t *state, void *user_data) {
   spl_o_tap_state = 0;
 }
 
-void space_cadet_close_finished(qk_tap_dance_state_t *state, void *user_data) {
+void space_cadet_close_finished(tap_dance_state_t *state, void *user_data) {
   spl_c_tap_state = cur_dance(state);
   switch (spl_c_tap_state) {
   case SINGLE_TAP:
@@ -101,7 +101,7 @@ void space_cadet_close_finished(qk_tap_dance_state_t *state, void *user_data) {
   }
 }
 
-void space_cadet_close_reset(qk_tap_dance_state_t *state, void *user_data) {
+void space_cadet_close_reset(tap_dance_state_t *state, void *user_data) {
   switch (spl_c_tap_state) {
   case SINGLE_TAP:
     unregister_code(KC_0); // )
@@ -125,7 +125,7 @@ void space_cadet_close_reset(qk_tap_dance_state_t *state, void *user_data) {
   spl_c_tap_state = 0;
 }
 
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [TD_SPC_TAB] = ACTION_TAP_DANCE_DOUBLE(KC_SPACE, KC_TAB),
     [TD_OPENBRACE] = ACTION_TAP_DANCE_FN_ADVANCED(
         NULL, space_cadet_open_finished, space_cadet_open_reset),
@@ -143,17 +143,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         MO(1), KC_LCTL, LSFT(KC_INSERT), KC_BSPC, KC_LSFT, LCTL(KC_INSERT),
 
-        LCTL(KC_S), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SLCK, KC_PAUS, KC_FN0,
-        KC_1, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_Y, KC_U, KC_I, KC_O,
+        MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_0,
+        KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_Y, KC_U, KC_I, KC_O,
         KC_P, KC_BSLS, LT(1, KC_H), SFT_T(KC_J), CTL_T(KC_K), WIN_T(KC_L),
         ALT_T(KC_SCLN), KC_QUOT, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
         TD(TD_CLOSEBRACE), LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE),
         TD(TD_CLOSEBRACE),
 
-        KC_RCTL, MO(1), KC_PGUP, KC_PGDN, KC_SFTENT, TD(TD_SPC_TAB)),
+        KC_RCTL, MO(1), KC_PGUP, KC_PGDN, SC_SENT, TD(TD_SPC_TAB)),
 
     [1] = LAYOUT(
-        RESET, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO,
+        QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -169,7 +169,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LCTL(LSFT(KC_T)), KC_TRNS, LCTL(KC_T), LCTL(KC_W), KC_NO, KC_NO),
 
     [2] = LAYOUT(
-        RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
