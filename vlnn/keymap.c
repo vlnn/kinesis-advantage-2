@@ -135,13 +135,15 @@ tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_ESC, LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), LWIN(KC_5),
-        LWIN(KC_6), LWIN(KC_7), LWIN(KC_8), KC_EQL, KC_1, KC_2, KC_3, KC_4,
-        KC_5, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_ESC, ALT_T(KC_A),
-        WIN_T(KC_S), CTL_T(KC_D), SFT_T(KC_F), LT(1, KC_G), TD(TD_OPENBRACE),
-        KC_Z, KC_X, KC_C, KC_V, KC_B, KC_GRV, KC_NO, KC_LBRC, KC_RBRC,
+        KC_ESC, LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), LWIN(KC_5), LWIN(KC_6), LWIN(KC_7), LWIN(KC_8),
+        KC_EQL, KC_1, KC_2, KC_3, KC_4, KC_5,
+        KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,
+        KC_ESC, ALT_T(KC_A), WIN_T(KC_S), CTL_T(KC_D), SFT_T(KC_F), LT(1, KC_G),
+        TD(TD_OPENBRACE), KC_Z, KC_X, KC_C, KC_V, KC_B,
+        KC_GRV, KC_NO, KC_LBRC, KC_RBRC,
 
-        MO(1), KC_LCTL, LSFT(KC_INSERT), KC_BSPC, KC_LSFT, LCTL(KC_INSERT),
+        MO(1), KC_LCTL, LWIN(KC_V),
+        KC_BSPC, KC_LSFT, LWIN(KC_C),
 
         MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_0,
         KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_Y, KC_U, KC_I, KC_O,
