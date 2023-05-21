@@ -5,6 +5,7 @@ Kinesis Advantage2 is the state-of-the-art ergonomic keyboard with sofisticated 
 
 This setup here is
 
+* MacOS specific (e.g. COPY/INSERT, language switching etc)
 * qwerty-based
 * simple
 * customized instead of being universal
