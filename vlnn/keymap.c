@@ -135,24 +135,25 @@ tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_ESC, LWIN(KC_1), LWIN(KC_2), LWIN(KC_3), LWIN(KC_4), LWIN(KC_5), LWIN(KC_6), LWIN(KC_7), LWIN(KC_8),
-        KC_EQL, KC_1, KC_2, KC_3, KC_4, KC_5,
+        KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
+        KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,
         KC_ESC, ALT_T(KC_A), WIN_T(KC_S), CTL_T(KC_D), SFT_T(KC_F), LT(1, KC_G),
         TD(TD_OPENBRACE), KC_Z, KC_X, KC_C, KC_V, KC_B,
-        KC_GRV, KC_NO, KC_LBRC, KC_RBRC,
+        KC_EQL, KC_NO, KC_LBRC, KC_RBRC,
 
         MO(1), KC_LCTL, LWIN(KC_V),
         KC_BSPC, KC_LSFT, LWIN(KC_C),
 
-        MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_0,
-        KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_Y, KC_U, KC_I, KC_O,
-        KC_P, KC_BSLS, LT(1, KC_H), SFT_T(KC_J), CTL_T(KC_K), WIN_T(KC_L),
-        ALT_T(KC_SCLN), KC_QUOT, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-        TD(TD_CLOSEBRACE), LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE),
-        TD(TD_CLOSEBRACE),
+        MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_F14,
+        KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
+        KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLS,
+        LT(1, KC_H), SFT_T(KC_J), CTL_T(KC_K), WIN_T(KC_L), ALT_T(KC_SCLN), KC_QUOT,
+        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, TD(TD_CLOSEBRACE),
+        LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE), TD(TD_CLOSEBRACE),
 
-        KC_RCTL, MO(1), KC_PGUP, KC_PGDN, SC_SENT, TD(TD_SPC_TAB)),
+        KC_RCTL, MO(1), KC_PGUP,
+        KC_PGDN, SC_SENT, LT(1, KC_SPC)),
 
     [1] = LAYOUT(
         QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO,

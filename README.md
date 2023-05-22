@@ -19,16 +19,16 @@ This setup here is
 
 This is general more functional variant, which **_requires_** [Stapelberg mod](https://michael.stapelberg.ch/posts/2013-03-21-kinesis_custom_controller/). This means hardware change of the controller of your Kinesis Advantage keyboard. In return you have all the features from QMK available (in my firmware mod keys set up on home row keys -- i.e. holding `F` or `J` is same as holding the `SHIFT` key -- which makes "usual" mod keys under pinky unnecessary). I don't think there is a feature in official firmware, which you can not set up using QMK -- except the warranty!
 
-* clone [qmk_firmware](https://github.com/qmk/qmk_firmware) repo
-* create new directory inside `qmk_firmware/keyboards/kinesis/keymaps/{your_directory}`
-* copy files from `qmk` directory there
-* `make kinesis/stapelberg:{your_directory}` from `qmk_firmware` root directory
-* the firmware called `kinesis_stapelberg_{your_directory}` can be installed to your keyboard using [**teensy**](https://www.pjrc.com/teensy/loader_linux.html) or [**qmk_toolbox**](https://qmk.fm/toolbox/)
-
+* clone [qmk_firmware](https://github.com/qmk/qmk_firmware) repo into `~/src` and follow its installation instructions
+* clone [this repo](https://github.com/vlnn/kinesis-advantage-2) into `~/src`
+* `cd ~/src/kinesis-advantage-2`
+* `make compile`
+* if no errors on previous step, `make flash` -- here you will have to use "RESET" key so the flasher could see your keyboard
+* et voila
 
 ## Official harware (no mod) keymap installation
 #### Note that it's outdated and misses some features that "Stapelberg" version has
-#### This also means that official setup is no longer maintained
+#### This also means that official setup is no longer maintained and is planned to be removed
 * update the keyboard firmware to **1.0.516** as described here: https://kinesis-ergo.com/support/advantage2/
 * get to power-user mode pressing *progm+shift+esc*
 * mount and open the folder with configs pressing *progm+F1*
