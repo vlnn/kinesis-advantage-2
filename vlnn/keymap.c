@@ -135,7 +135,7 @@ tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_ESC, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
+        KC_ESC, LSFT(KC_F1), LSFT(KC_F2), LSFT(KC_F3), LSFT(KC_F4), KC_F5, KC_F6, KC_F7, KC_F8,
         KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,
         KC_ESC, ALT_T(KC_A), WIN_T(KC_S), CTL_T(KC_D), SFT_T(KC_F), LT(1, KC_G),
