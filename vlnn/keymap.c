@@ -133,43 +133,57 @@ tap_dance_action_t tap_dance_actions[] = {
         NULL, space_cadet_close_finished, space_cadet_close_reset),
 };
 
+const uint16_t PROGMEM circ[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM ampr[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM past[] = {KC_I, KC_O, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(circ, KC_LBRC),
+    COMBO(ampr, KC_RBRC),
+    COMBO(past, KC_PAST),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_ESC, LSFT(KC_F1), LSFT(KC_F2), LSFT(KC_F3), LSFT(KC_F4), KC_F5, KC_F6, KC_F7, KC_F8,
         KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,
-        KC_ESC, ALT_T(KC_A), WIN_T(KC_S), CTL_T(KC_D), SFT_T(KC_F), LT(1, KC_G),
+        HYPR_T(KC_ESC), ALT_T(KC_A), CTL_T(KC_S), WIN_T(KC_D), SFT_T(KC_F), LT(1, KC_G),
         TD(TD_OPENBRACE), KC_Z, KC_X, KC_C, KC_V, KC_B,
         KC_EQL, KC_NO, KC_LBRC, KC_RBRC,
 
-        MO(1), KC_LCTL, LWIN(KC_V),
+        MO(1), CTL_T(KC_F14), LWIN(KC_V),
         KC_BSPC, KC_LSFT, LWIN(KC_C),
 
         MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_F14,
         KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
         KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLS,
-        LT(1, KC_H), SFT_T(KC_J), CTL_T(KC_K), WIN_T(KC_L), ALT_T(KC_SCLN), KC_QUOT,
+        LT(1, KC_H), RSFT_T(KC_J), RWIN_T(KC_K), RCTL_T(KC_L), RALT_T(KC_SCLN), KC_QUOT,
         KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, TD(TD_CLOSEBRACE),
         LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE), TD(TD_CLOSEBRACE),
 
-        KC_RCTL, MO(1), KC_PGUP,
+        CTL_T(KC_F13), MO(1), KC_PGUP,
         KC_PGDN, SC_SENT, LT(1, KC_SPC)),
 
     [1] = LAYOUT(
-        QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO,
 
-        KC_NO, KC_NO, LCTL(KC_Y), KC_DELETE, KC_TRNS, LCTL(KC_Z),
+        KC_NO, KC_NO, LCTL(KC_Y),
+        KC_BSPC, KC_TRNS, LCTL(KC_Z),
 
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TAB, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO,
-        LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RGHT), KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_TAB, KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
+        KC_NO, LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RGHT), KC_NO,
+        KC_NO, KC_NO, KC_NO, KC_NO,
 
-        LCTL(LSFT(KC_T)), KC_TRNS, LCTL(KC_T), LCTL(KC_W), KC_NO, KC_NO),
+        LCTL(LSFT(KC_T)), KC_TRNS, LCTL(KC_T),
+        LWIN(KC_W), KC_NO, KC_NO),
 
     [2] = LAYOUT(
         QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,

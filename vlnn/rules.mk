@@ -32,3 +32,4 @@ AUDIO_ENABLE = no           # Audio output should be port E6, current quantum li
 DEFAULT_FOLDER = kinesis/stapelberg
 
 TAP_DANCE_ENABLE = yes
+COMBO_ENABLE = yes
