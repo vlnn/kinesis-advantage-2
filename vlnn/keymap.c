@@ -162,7 +162,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE), TD(TD_CLOSEBRACE),
 
         CTL_T(KC_F13), MO(1), KC_PGUP,
-        KC_PGDN, SC_SENT, LT(1, KC_SPC)),
+        KC_PGDN, KC_ENT, LT(1, KC_SPC)),
 
     [1] = LAYOUT(
         QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
