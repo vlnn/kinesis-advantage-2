@@ -166,7 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_PGDN, SFT_T(KC_ENT), LT(1, KC_SPC)),
 
     [1] = LAYOUT(
-        QK_REBOOT, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
+        QK_REBOOT, DB_TOGG, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -178,8 +178,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         TD_OPENBRACE, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        TD(TD_OPENBRACE), (TD_CLOSEBRACE), KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
+        TD(TD_OPENBRACE), TD(TD_CLOSEBRACE), KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_PLUS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
         KC_NO, LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RGHT), KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO,
 
@@ -205,6 +205,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   if (!process_achordion(keycode, record)) { return false; }
 
+#ifdef CONSOLE_ENABLE
+    uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
+#endif
   return true;
 }
 
@@ -213,5 +216,10 @@ void matrix_scan_user(void) {
 }
 
 uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
-  return 600;
+  switch (tap_hold_keycode) {
+    case LT(1, KC_SPC):
+      return 0;  // Bypass Achordion for these keys.
+  }
+
+  return 600;  // Otherwise use a timeout of 800 ms.
 }
