@@ -17,41 +17,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-// Mouse
-#define MOUSEKEY_DELAY          60
-#define MOUSEKEY_INTERVAL       20
-#define MOUSEKEY_MAX_SPEED      4
-#define MOUSEKEY_TIME_TO_MAX    10
-#define MOUSEKEY_WHEEL_MAX_SPEED 1
-#define MOUSEKEY_WHEEL_DELTA 1
-#define MOUSEKEY_WHEEL_TIME_TO_MAX 1
+#define TAPPING_TERM 180
+#define TAPPING_TERM_PER_KEY
+#define PERMISSIVE_HOLD
+#define QUICK_TAP_TERM_PER_KEY
+#define COMBO_TERM 195
 
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */
-
-/* disable debug print */
-//#define NO_DEBUG
-
-/* disable print */
-//#define NO_PRINT
-
-/* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-
-#define TAPPING_TERM 200
-#define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_FORCE_HOLD
-#define COMBO_TERM 175
-#define COMBO_HOLD_TERM 175
-
+#define COMBO_HOLD_TERM 185
 #define COMBO_COUNT 3
 

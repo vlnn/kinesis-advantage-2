@@ -33,3 +33,7 @@ DEFAULT_FOLDER = kinesis/stapelberg
 
 TAP_DANCE_ENABLE = yes
 COMBO_ENABLE = yes
+AUTO_SHIFT_ENABLE = no      # Tried and disabled as incompatible with home row mods
+
+
+SRC += features/achordion.c

@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "features/achordion.h"
 
 enum { TD_SPC_TAB = 0, TD_OPENBRACE, TD_CLOSEBRACE };
 
@@ -176,8 +177,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_BSPC, KC_TRNS, LCTL(KC_Z),
 
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        KC_NO, KC_TAB, KC_NO, KC_NO, KC_NO, KC_NO,
+        TD_OPENBRACE, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
+        TD(TD_OPENBRACE), (TD_CLOSEBRACE), KC_NO, KC_NO, KC_NO, KC_NO,
         KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
         KC_NO, LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RGHT), KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO,
@@ -200,3 +201,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO),
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_achordion(keycode, record)) { return false; }
+
+  return true;
+}
+
+void matrix_scan_user(void) {
+  achordion_task();
+}
+
+uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
+  return 600;
+}
