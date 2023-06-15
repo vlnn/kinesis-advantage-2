@@ -1,6 +1,8 @@
 # kinesis-advantage-2
 ## Sane layouts for the THE KINESIS KEYBOARD
 
+*The sane layout for insane world. Ukraine 🇺🇦 is being attacked and destroyed by terrorist state of russia. Help 🇺🇦Ukraine🇺🇦! Defend the World from russian fascism!*
+
 Kinesis Advantage2 is the state-of-the-art ergonomic keyboard with sofisticated configuration setup.
 
 This setup here is
