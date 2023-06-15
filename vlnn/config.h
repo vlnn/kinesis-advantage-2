@@ -25,4 +25,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define COMBO_HOLD_TERM 185
 #define COMBO_COUNT 3
-

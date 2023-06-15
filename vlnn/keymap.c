@@ -134,15 +134,6 @@ tap_dance_action_t tap_dance_actions[] = {
         NULL, space_cadet_close_finished, space_cadet_close_reset),
 };
 
-const uint16_t PROGMEM circ[] = {KC_Y, KC_U, COMBO_END};
-const uint16_t PROGMEM ampr[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM past[] = {KC_I, KC_O, COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(circ, KC_LBRC),
-    COMBO(ampr, KC_RBRC),
-    COMBO(past, KC_PAST),
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_ESC, LSFT(KC_F1), LSFT(KC_F2), LSFT(KC_F3), LSFT(KC_F4), KC_F5, KC_F6, KC_F7, KC_F8,
@@ -178,7 +169,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         TD_OPENBRACE, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-        TD(TD_OPENBRACE), TD(TD_CLOSEBRACE), KC_NO, KC_NO, KC_NO, KC_NO,
+        KC_MINUS, TD(TD_OPENBRACE), TD(TD_CLOSEBRACE), KC_NO, KC_NO, KC_NO,
         KC_PLUS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO,
         KC_NO, LCTL(KC_LEFT), LCTL(KC_DOWN), LCTL(KC_UP), LCTL(KC_RGHT), KC_NO,
         KC_NO, KC_NO, KC_NO, KC_NO,

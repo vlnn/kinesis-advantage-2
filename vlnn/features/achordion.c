@@ -184,9 +184,13 @@ void achordion_task(void) {
   }
 }
 
+bool is_kinesis_exception(int col, int row) {
+  return (col == 5 && ((row == 6) || (row == 8)));
+}
+
 // Returns true if `pos` on the left hand of the keyboard, false if right.
 static bool on_left_hand(keypos_t pos) {
-  if (pos.col == 8 && pos.row == 7) {
+  if (is_kinesis_exception(pos.col,pos.row)) {
   return false;
   }
   return (MATRIX_COLS > MATRIX_ROWS) ? pos.col < (MATRIX_COLS / 2) - 1
