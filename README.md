@@ -7,12 +7,13 @@ Kinesis Advantage2 is the state-of-the-art ergonomic keyboard with sofisticated 
 
 This setup here is
 
-* MacOS specific (e.g. COPY/INSERT, language switching etc)
 * qwerty-based
-* simple
+* simple (as in two main layers only)
+* MacOS specific (e.g. COPY/INSERT, language switching, virtual desktops switching etc)
 * customized instead of being universal
 * symmetrical where possible
-* autodocumented (in sense it should be easy enough to get what's inside the layout using sources)
+* heavy relies on home row keys modifiers
+* ~~autodocumented (in sense it should be easy enough to get what's inside the layout using sources)~~ we're not there yet
 * intended to transform the potential powers of the kinesis advantage 2 keyboard into the kinetic ones
 
 ![Somewhat outdated layout](https://github.com/vlnn/kinesis-advantage-2/blob/master/kinesis-advantage-tamed.png)
@@ -25,17 +26,8 @@ This is general more functional variant, which **_requires_** [Stapelberg mod](h
 * clone [this repo](https://github.com/vlnn/kinesis-advantage-2) into `~/src`
 * `cd ~/src/kinesis-advantage-2`
 * `make compile`
-* if no errors on previous step, `make flash` -- here you will have to use "RESET" key so the flasher could see your keyboard
+* if no errors on previous step, `make flash` -- here you will have to use F9 and Esc keys on the very top row simultaneousely so the flasher could see and flash your keyboard.
 * et voila
-
-## Official harware (no mod) keymap installation
-#### Note that it's outdated and misses some features that "Stapelberg" version has
-#### This also means that official setup is no longer maintained and is planned to be removed
-* update the keyboard firmware to **1.0.516** as described here: https://kinesis-ergo.com/support/advantage2/
-* get to power-user mode pressing *progm+shift+esc*
-* mount and open the folder with configs pressing *progm+F1*
-* copy the configs from `official` over the existing ones
-* press *progm+F1* once again to unmount the `config` folder of the internal drive and apply the new configuration
 
 ## General notes
 You're more than welcome to make configs better sending me pull requests or creating issues. I'm more than free to ignore those requests, but will take a look.
