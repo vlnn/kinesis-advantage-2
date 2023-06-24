@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TD(TD_OPENBRACE), KC_Z, KC_X, KC_C, KC_V, KC_B,
         KC_EQL, KC_NO, KC_LBRC, KC_RBRC,
 
-        MO(1), CTL_T(KC_F14), LWIN(KC_V),
+        HYPR(KC_U), CTL_T(KC_F14), LWIN(KC_V),
         KC_BSPC, KC_LSFT, LWIN(KC_C),
 
         MO(2), KC_F10, KC_F11, KC_F12, KC_PSCR, KC_SCRL, KC_PAUS, KC_F13, KC_F14,
@@ -153,7 +153,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, TD(TD_CLOSEBRACE),
         LSFT(KC_LBRC), LSFT(KC_RBRC), TD(TD_OPENBRACE), TD(TD_CLOSEBRACE),
 
-        CTL_T(KC_F13), MO(1), KC_PGUP,
+        CTL_T(KC_F13), HYPR(KC_P), KC_PGUP,
         KC_PGDN, SFT_T(KC_ENT), LT(1, KC_SPC)),
 
     [1] = LAYOUT(
