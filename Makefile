@@ -3,7 +3,7 @@
 #
 
 .DEFAULT_GOAL := help
-QMKDIR :=  ~/src/qmk_firmware
+QMKDIR :=  ~/src/open/qmk_firmware
 QMKPATH := keyboards/kinesis/keymaps
 
 compile: ## Deploy the 'vlnn' keymap top qmk_firmware repo and compile it into the firmware of hex format
