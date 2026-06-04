@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "features/achordion.h"
 
 enum { TD_SPC_TAB = 0, TD_OPENBRACE, TD_CLOSEBRACE };
 
@@ -170,23 +169,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  if (!process_achordion(keycode, record)) { return false; }
-
 #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
 #endif
   return true;
 }
 
-void matrix_scan_user(void) {
-  achordion_task();
+char chordal_hold_handedness(keypos_t key) {
+  if (key.col >= 5 || key.row >= 12)
+    return '*';
+
+  return key.row <= 5 ? 'L' : 'R';
 }
 
-uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
-  switch (tap_hold_keycode) {
-    case LT(1, KC_SPC):
-      return 0;  // Bypass Achordion for these keys.
-  }
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
+                      uint16_t other_keycode, keyrecord_t* other_record) {
+  if (tap_hold_keycode == LT(1, KC_SPC))
+    return true;
 
-  return 600;  // Otherwise use a timeout of 800 ms.
+  return get_chordal_hold_default(tap_hold_record, other_record);
 }
