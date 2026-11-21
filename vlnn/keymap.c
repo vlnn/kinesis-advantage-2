@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-enum { TD_SPC_TAB = 0, TD_OPENBRACE, TD_CLOSEBRACE };
+enum { TD_OPENBRACE, TD_CLOSEBRACE };
 
 typedef struct {
   bool is_press_action;
@@ -126,7 +126,6 @@ void space_cadet_close_reset(tap_dance_state_t *state, void *user_data) {
 }
 
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_SPC_TAB] = ACTION_TAP_DANCE_DOUBLE(KC_SPACE, KC_TAB),
     [TD_OPENBRACE] = ACTION_TAP_DANCE_FN_ADVANCED(
         NULL, space_cadet_open_finished, space_cadet_open_reset),
     [TD_CLOSEBRACE] = ACTION_TAP_DANCE_FN_ADVANCED(
