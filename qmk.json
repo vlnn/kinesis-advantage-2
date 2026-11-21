@@ -1,0 +1,6 @@
+{
+    "userspace_version": "1.0",
+    "build_targets": [
+        ["kinesis/stapelberg", "vlnn"]
+    ]
+}
